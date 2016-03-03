@@ -9,7 +9,7 @@ class UserViewsLegislatorsTest < ActionDispatch::IntegrationTest
   test 'user logging in works as expected' do
     visit '/'
     click_on("Login")
-    assert page.has_content?("john slota")
+    assert page.has_content?("john")
     assert page.has_content? "Daniel Pabon"
     assert page.has_content? "Lucia Guzman"
   end
