@@ -7,12 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <nav class="navbar navbar-inverse">
+  <% if session[:user_id] %>
+  <div class="container-fluid">
+    <ul class="navbar-header navbar-text">
+      <p> Welcome <%= current_user.first_name%>, check your reps!</p>
+    </ul>
+    <ul class="nav navbar-nav navbar-right navbar-text">
+      <p> <%= link_to "Signout", logout_path%></p>
+    </ul>
+  </div>
+  <% else %>
+  <div class="container-fluid">
+    <ul class="navbar-header navbar-text">
+      <p> Log in to see your reps</p>
+    </ul>
+    <ul class="nav navbar-nav navbar-right navbar-text">
+      <p> <%= link_to "Login", login_path%></p>
+    </ul>
+  </div>
+  <% end %>
 </nav>
 <body class="background-image">
-<div class="container-fluid">
-
-<%= yield %>
-</div>
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
