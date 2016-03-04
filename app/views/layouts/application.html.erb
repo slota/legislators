@@ -6,15 +6,15 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<div class="background-banner">
+<!-- <div class="background-banner">
 </div>
-<h4 class="test">test</h4>
+<h4 class="test">test</h4> -->
 
 <nav class="navbar navbar-inverse">
   <% if session[:user_id] %>
   <div class="container-fluid">
     <ul class="navbar-header navbar-text">
-      <p> Welcome <%= current_user.first_name%>, check your reps!</p>
+      <p> Welcome<%= current_user.first_name%>, check your reps!</p>
     </ul>
     <ul class="nav navbar-nav navbar-right navbar-text">
       <p> <%= link_to "Signout", logout_path%></p>
