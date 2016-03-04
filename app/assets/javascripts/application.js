@@ -14,3 +14,10 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+$('.background-banner').delay( 2000 ).fadeTo('slow', 0.0);
+$('.test').delay( 2000 ).fadeTo('slow', 0.0);
+
+
+});
