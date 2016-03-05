@@ -6,8 +6,7 @@ class User < ActiveRecord::Base
     user.uid        = user_hash.uid
     user.token      = user_hash.credentials.token
     user.email      = user_hash.info.email
-    user.first_name = user_hash.info.first_name
-    user.last_name  = user_hash.info.last_name
+    user.name       = user_hash.info.name
     user.image      = user_hash.info.image
     user.save
 

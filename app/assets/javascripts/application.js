@@ -19,5 +19,27 @@ $(document).ready(function(){
 $('.background-banner').delay( 2000 ).fadeTo('slow', 0.0);
 $('.test').delay( 2000 ).fadeTo('slow', 0.0);
 
-
+  legislatorSearch();
 });
+
+function legislatorSearch() {
+  $('#search-submit').click(event, function() {
+    var searchTerm = $('#legislator-search').val().toLowerCase();
+    debugger;
+
+    });
+
+
+};
+
+function fetchLegislatorName(searchTerm) {
+  $.ajax({
+    type: "GET",
+    url: "API ENDPOINT HERE" + searchTerm,
+    success: function(legislators) {
+      $.each(legislators, function(index, name) {
+        renderLegislators(name)
+    }
+  )},
+  })
+};
