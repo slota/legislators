@@ -8,7 +8,7 @@ class UserViewsOneLawmakerTest < ActionDispatch::IntegrationTest
 
   test 'user views legislator' do
     visit '/'
-    click_on("Login")
+    click_on("Sign in with Facebook")
     fill_in("name", with: "diana")
     click_on("Search")
 

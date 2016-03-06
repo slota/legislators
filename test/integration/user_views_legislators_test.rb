@@ -8,7 +8,7 @@ class UserViewsLegislatorsTest < ActionDispatch::IntegrationTest
 
   test 'user logging in works as expected' do
     visit '/'
-    click_on("Login")
+    click_on("Sign in with Facebook")
     assert page.has_content?("john")
   end
 end

@@ -8,7 +8,7 @@ class UserSearchForLegislatorTest < ActionDispatch::IntegrationTest
 
   test 'user searches for legislator' do
     visit '/'
-    click_on("Login")
+    click_on("Sign in with Facebook")
     fill_in("name", with: "diana")
     click_on("Search")
 
