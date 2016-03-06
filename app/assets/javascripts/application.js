@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+//= require social-share-button
 
 $(document).ready(function(){
 $('.background-banner').delay( 2000 ).fadeTo('slow', 0.0);

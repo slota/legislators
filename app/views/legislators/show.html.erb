@@ -7,7 +7,8 @@
     <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
   </div>
   <div class="row">
-    <%= link_to("#{@articles.url}", @articles.url) %><br>
-    <%= link_to("Share on Facebook!", "http://www.facebook.com/sharer.php?u=#{@articles.url}") %>
+    <%= link_to("#{@articles.url}", @articles.url) %>
+    <%= link_to("Share on Facebook!", "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=http://localhost:3000/legislators") %>
+    <%= social_share_button_tag(@articles.url) %>
   </div>
 </div>
