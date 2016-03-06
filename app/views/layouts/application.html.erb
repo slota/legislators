@@ -26,9 +26,9 @@
     <ul class="navbar-header navbar-text">
       <p> Log in to see your reps</p>
     </ul>
-    <ul class="nav navbar-nav navbar-right navbar-text">
-      <p> <%= link_to "Login", login_path%></p>
-    </ul>
+    <%= link_to login_path, class: "nav navbar-nav navbar-right btn btn-block btn-social btn-facebook" do %>
+       <span class="fa fa-facebook"></span> Sign in with Facebook
+    <% end %> 
   </div>
   <% end %>
 </nav>
