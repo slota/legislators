@@ -4,8 +4,7 @@ class LegislatorsController < ApplicationController
   end
 
   def show
-    binding.pry
-    @articles = Article.all
+    @articles = Article.all(sentiment=nil, params[:id])
     @legislator = params[:id]
   end
 end
