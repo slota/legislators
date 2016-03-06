@@ -6,4 +6,8 @@
     <%= link_to "Positive News", legislator_path(@legislator, "positive") %>
     <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
   </div>
+  <div class="row">
+    <%= link_to("#{@articles.url}", @articles.url) %><br>
+    <%= link_to("Share on Facebook!", "http://www.facebook.com/sharer.php?u=#{@articles.url}") %>
+  </div>
 </div>

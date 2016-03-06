@@ -4,7 +4,9 @@ class LegislatorsController < ApplicationController
   end
 
   def show
-    @articles = Article.all(sentiment=nil, params[:id])
+    @articles = Article.all
+    # @articles = Article.all(sentiment=nil, params[:id])
+
     @legislator = params[:id]
   end
 end
