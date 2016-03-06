@@ -10,7 +10,5 @@ class UserViewsLegislatorsTest < ActionDispatch::IntegrationTest
     visit '/'
     click_on("Login")
     assert page.has_content?("john")
-    assert page.has_content? "Daniel Pabon"
-    assert page.has_content? "Lucia Guzman"
   end
 end

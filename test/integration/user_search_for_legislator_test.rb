@@ -9,10 +9,10 @@ class UserSearchForLegislatorTest < ActionDispatch::IntegrationTest
   test 'user searches for legislator' do
     visit '/'
     click_on("Login")
-    fill_in("legislator", with: "diana")
-    click_on("Submit")
+    fill_in("name", with: "diana")
+    click_on("Search")
 
     assert current_path, legislators_path
-    assert page.has_content? "Diana Degette"
+    assert page.has_content? "Diana DeGette"
   end
 end
