@@ -1,5 +1,5 @@
 class Article
-  attr_reader :articles, :url
+  attr_reader :articles, :url, :title
   def self.all
     # (sentiment, name)
     @articles = Article.new
@@ -9,6 +9,7 @@ class Article
   end
 
   def initialize
+    @title = "This is crazy stuff here!"
     @url = "http://coloradopols.com/diary/81284/saturday-night-vote-ball-open-thread"
   end
 end

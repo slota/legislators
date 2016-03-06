@@ -1,13 +1,19 @@
 <div class="card-legislator">
+  <h2>News Articles for <%= @legislator %></h2>
   <div class="row">
-    <%= @legislator%>
+    <div class="button">
+      <%= link_to "Positive News", legislator_path(@legislator, "positive") %>
+    </div>
+    <div class="button">
+      <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
+    </div>
   </div>
   <div class="row">
-    <%= link_to "Positive News", legislator_path(@legislator, "positive") %>
-    <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
-  </div>
-  <div class="row">
+    <h3> <%= @articles.title %></h3>
+    <%= link_to "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=#{request.original_url}", class: "btnz share facebook" do %>
+    <i class="fa fa-facebook"></i> Share on Facebook!
+    <% end %>
+    <br>
     <%= link_to("#{@articles.url}", @articles.url) %>
-    <%= link_to("Share on Facebook!", "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=#{request.original_url}") %>
   </div>
 </div>
