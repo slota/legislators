@@ -1,26 +1,36 @@
+<%= form_tag :legislators, method: :get do |f| %>
+  <%= text_field_tag :name, nil, placeholder: "Search for Legislator by Name" %><br />
+  <%= submit_tag "Search", class: "submit" %>
+<% end %>
+
 
 
 <div class="row">
-<% @legislators.each do |legislator| %>
-<div class="col-md-4">
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">
-        <%= legislator.full_name%>, <%= legislator.state.upcase %>
-      </h4>
-      <h6 class="card-subtitle"><%= legislator.party %></h6>
+  <% if @legislators %>
+    <% @legislators.each do |legislator| %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">
+            <%= legislator.first_name%> <%= legislator.last_name%><br>
+            <h6 class="card-subtitle">
+              <%= legislator.state %>
+              <%= legislator.party %><br>
+              <%= legislator.chamber %>
+            </h6>
+        </h4>
+        </div>
+        <%=image_tag(legislator.photo) %>
+        <div class="card-block">
+          <p class="card-text">
+             <%= legislator.email %><br>
+             <%= legislator.phone %><br>
+             <%= legislator.twitter %><br>
+             <%=link_to("Official Website", legislator.url) %>
+          </p>
+        </div>
+      </div>
     </div>
-    <%=image_tag(legislator.photo) %>
-    <div class="card-block">
-      <p class="card-text">
-         <%= legislator.occupation %><br>
-         <%= legislator.email %><br>
-         <%= legislator.phone %><br>
-         <%=link_to("Official Website", legislator.url) %>
-      </p>
-    </div>
-  </div>
-</div>
+    <% end %>
 <% end %>
-
 </div>

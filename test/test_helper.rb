@@ -13,8 +13,8 @@ end
 class ActionDispatch::IntegrationTest
   def stub_omniauth
     OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-      'provider' => 'google_oauth2',
+    OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+      'provider' => 'facebook',
       'uid' => '1234',
       'credentials' =>
       {

@@ -5,8 +5,7 @@ one:
   uid: MyString
   token: MyString
   email: MyString
-  first_name: MyString
-  last_name: MyString
+  name: MyString
   image: MyString
 
 two:
@@ -14,6 +13,5 @@ two:
   uid: MyString
   token: MyString
   email: MyString
-  first_name: MyString
-  last_name: MyString
+  name: MyString
   image: MyString

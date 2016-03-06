@@ -14,7 +14,7 @@
   <% if session[:user_id] %>
   <div class="container-fluid">
     <ul class="navbar-header navbar-text">
-      <p> Welcome<%= current_user.first_name%>, check your reps!</p>
+      <p> Welcome <%= current_user.name%>, check your reps!</p>
     </ul>
     <ul class="nav navbar-nav navbar-right navbar-text">
       <p> <%= link_to "Signout", logout_path%></p>
