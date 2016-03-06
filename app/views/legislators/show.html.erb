@@ -8,7 +8,6 @@
   </div>
   <div class="row">
     <%= link_to("#{@articles.url}", @articles.url) %>
-    <%= link_to("Share on Facebook!", "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=http://localhost:3000/legislators") %>
-    <%= social_share_button_tag(@articles.url) %>
+    <%= link_to("Share on Facebook!", "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=#{request.original_url}") %>
   </div>
 </div>
