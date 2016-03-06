@@ -1,3 +1,8 @@
+<%= form_tag :legislators, method: :get do |f| %>
+  <%= text_field_tag :name, nil, placeholder: "Search for Legislator by Name" %><br />
+  <%= submit_tag "Search", class: "submit" %>
+<% end %>
+
 
 
 <div class="row">
@@ -7,16 +12,20 @@
       <div class="card">
         <div class="card-block">
           <h4 class="card-title">
-            <%= legislator.full_name%>, <%= legislator.state.upcase %>
-          </h4>
-          <h6 class="card-subtitle"><%= legislator.party %></h6>
+            <%= legislator.first_name%> <%= legislator.last_name%><br>
+            <h6 class="card-subtitle">
+              <%= legislator.state %>
+              <%= legislator.party %><br>
+              <%= legislator.chamber %>
+            </h6>
+        </h4>
         </div>
         <%=image_tag(legislator.photo) %>
         <div class="card-block">
           <p class="card-text">
-             <%= legislator.occupation %><br>
              <%= legislator.email %><br>
              <%= legislator.phone %><br>
+             <%= legislator.twitter %><br>
              <%=link_to("Official Website", legislator.url) %>
           </p>
         </div>
@@ -24,9 +33,4 @@
     </div>
     <% end %>
 <% end %>
-
-</div>
-<div>
-  <input type="text" id="legislator-search" placeholder="Search for Legislator by Name" required>
-  <button type="submit" id="search-submit"  placeholder="Submit" value="Submit">Submit</button>
 </div>

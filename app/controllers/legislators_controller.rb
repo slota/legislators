@@ -1,6 +1,5 @@
 class LegislatorsController < ApplicationController
   def index
-    # binding.pry
-    @legislators = nil
+    @legislators = Legislator.all(params["name"])
   end
 end
