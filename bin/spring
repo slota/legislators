@@ -5,6 +5,7 @@
 
 unless defined?(Spring)
   require 'rubygems'
+  require 'excon'
   require 'bundler'
 
   if (match = Bundler.default_lockfile.read.match(/^GEM$.*?^    (?:  )*spring \((.*?)\)$.*?^$/m))

@@ -28,6 +28,9 @@ gem 'launchy'
 gem 'faraday'
 gem 'geocoder'
 gem 'omniauth-facebook'
+gem 'alchemy-api-rb', :require => 'alchemy_api'
+gem 'excon'
+gem 'social-share-button'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
