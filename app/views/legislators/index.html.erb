@@ -3,8 +3,6 @@
   <%= submit_tag "Search", class: "submit" %>
 <% end %>
 
-
-
 <div class="row">
   <% if @legislators %>
     <% @legislators.each do |legislator| %>
@@ -12,7 +10,7 @@
       <div class="card">
         <div class="card-block">
           <h4 class="card-title">
-            <%= link_to "See my news!!", legislator_path(legislator.first_name, legislator.last_name)%><br>
+            <%= link_to "See my news!!", legislator_path("#{legislator.first_name}" " " "#{legislator.last_name}")%><br>
             <%=legislator.first_name%>
             <%= legislator.last_name%><br>
             <h6 class="card-subtitle">

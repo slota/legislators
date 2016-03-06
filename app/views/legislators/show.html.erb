@@ -1,1 +1,9 @@
-
+<div class="card-legislator">
+  <div class="row">
+    <%= @legislator%>
+  </div>
+  <div class="row">
+    <%= link_to "Positive News", legislator_path(@legislator, "positive") %>
+    <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
+  </div>
+</div>
