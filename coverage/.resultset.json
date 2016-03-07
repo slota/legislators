@@ -345,7 +345,7 @@
         1,
         null,
         1,
-        9,
+        10,
         null,
         null
       ],
@@ -398,7 +398,7 @@
         3,
         1,
         null,
-        2,
+        3,
         null,
         null
       ],
@@ -464,14 +464,15 @@
         1,
         1,
         0,
-        0,
+        null,
+        1,
+        10,
         null,
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        10,
+        10,
         null,
         null
       ],
@@ -485,12 +486,11 @@
         null,
         1,
         1,
-        1,
         null,
         null
       ]
     },
-    "timestamp": 1457387528
+    "timestamp": 1457393890
   },
   "Integration Tests": {
     "coverage": {
