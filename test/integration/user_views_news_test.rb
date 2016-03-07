@@ -1,12 +1,12 @@
 require 'capybara'
 require 'test_helper'
 
-class UserViewsOneLawmakerTest < ActionDispatch::IntegrationTest
+class UserViewsNewsTest < ActionDispatch::IntegrationTest
   def setup
     stub_omniauth
   end
 
-  test 'user views legislator' do
+  test 'user views legislator news' do
     visit '/'
     click_on("Sign in with Facebook")
     fill_in("name", with: "diana")
@@ -20,5 +20,8 @@ class UserViewsOneLawmakerTest < ActionDispatch::IntegrationTest
     assert current_path, legislator_path("Diana Degette")
     assert page.has_content? "Positive News"
     assert page.has_content? "Negative News"
+
+    click_on("Positive News")
+
   end
 end

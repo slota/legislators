@@ -9,11 +9,13 @@
     </div>
   </div>
   <div class="row">
-    <h3> <%= @articles.title %></h3>
-    <%= link_to "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=#{request.original_url}", class: "btnz share facebook" do %>
-    <i class="fa fa-facebook"></i> Share on Facebook!
+    <% if @articles %>
+      <h3> <%= @articles.title %></h3>
+      <%= link_to "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{@articles.url}&redirect_uri=#{request.original_url}", class: "btnz share facebook" do %>
+      <i class="fa fa-facebook"></i> Share on Facebook!
+      <% end %>
+      <br>
+      <%= link_to("#{@articles.url}", @articles.url) %>
     <% end %>
-    <br>
-    <%= link_to("#{@articles.url}", @articles.url) %>
   </div>
 </div>
