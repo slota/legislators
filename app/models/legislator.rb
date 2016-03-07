@@ -12,6 +12,7 @@ class Legislator
   end
 
   def self.capitalize_and_split(string_name)
+    # titleize
     name = string_name.split
     if name[0]
       name[0].capitalize!
