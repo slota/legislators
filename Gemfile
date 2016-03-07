@@ -33,6 +33,7 @@ gem 'alchemy-api-rb', :require => 'alchemy_api'
 gem 'excon'
 gem 'social-share-button'
 gem 'bootstrap-social-rails'
+gem 'sidekiq'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

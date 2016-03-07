@@ -1,5 +1,5 @@
 class PresidentsController < ApplicationController
   def index
-    @presidents = President.all
+    @presidents = President.all.shuffle
   end
 end
