@@ -152,6 +152,16 @@
         1,
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/johnslota/code/ruby_rails/1510/legislators/test/controllers/presidents_controller_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/johnslota/code/ruby_rails/1510/legislators/test/controllers/sessions_controller_test.rb": [
@@ -228,13 +238,22 @@
         null,
         1,
         null,
-        1,
+        0,
         0,
         0,
         null,
         null
       ],
       "/Users/johnslota/code/ruby_rails/1510/legislators/test/models/location_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/johnslota/code/ruby_rails/1510/legislators/test/models/president_test.rb": [
         1,
         null,
         1,
@@ -255,6 +274,10 @@
       "/Users/johnslota/code/ruby_rails/1510/legislators/app/models/location.rb": [
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/johnslota/code/ruby_rails/1510/legislators/app/models/president.rb": [
         1,
         null
       ],
@@ -293,7 +316,7 @@
         1,
         null,
         1,
-        6,
+        5,
         null,
         null
       ],
@@ -302,6 +325,10 @@
         null
       ],
       "/Users/johnslota/code/ruby_rails/1510/legislators/app/helpers/legislators_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/johnslota/code/ruby_rails/1510/legislators/app/helpers/presidents_helper.rb": [
         1,
         null
       ],
@@ -339,10 +366,10 @@
         null,
         null,
         1,
-        1,
+        0,
         null,
         null,
-        1,
+        0,
         null,
         null
       ],
@@ -396,25 +423,8 @@
         2,
         null,
         null
-      ],
-      "/Users/johnslota/code/ruby_rails/1510/legislators/app/models/article.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
       ]
     },
-    "timestamp": 1457308525
+    "timestamp": 1457328847
   }
 }

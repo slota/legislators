@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   resources :welcome, only: [:index, :show]
   resources :legislators, only: [:index, :show]
+  resources :presidents, only: [:index, :show]
 end
