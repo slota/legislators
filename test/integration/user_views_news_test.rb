@@ -21,7 +21,7 @@ class UserViewsNewsTest < ActionDispatch::IntegrationTest
     assert page.has_content? "Positive News"
     assert page.has_content? "Negative News"
 
-    click_on("Positive News")
+    click_on("Negative News")
 
   end
 end

@@ -5,7 +5,7 @@ class LegislatorsController < ApplicationController
 
   def show
     if params[:format]
-      @articles = Article.all(params[:format], params[:id])
+      @articles ||= Article.all(params[:format], params[:id])
     end
     @legislator = params[:id]
   end
