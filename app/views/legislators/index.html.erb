@@ -1,18 +1,21 @@
 <%= form_tag :legislators, method: :get do |f| %>
   <%= text_field_tag :name, nil, placeholder: "Search for Legislator by Name" %><br />
-  <%= submit_tag "Search", class: "submit" %>
+  <%= submit_tag "Search", class: "button-large" %>
 <% end %>
 
+<br>
 <div class="row">
   <% if @legislators %>
     <% @legislators.each do |legislator| %>
     <div class="col-md-4">
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title">
-            <%= link_to "See my news!!", legislator_path("#{legislator.first_name}" " " "#{legislator.last_name}")%><br>
+          <h3 class="card-title">
             <%=legislator.first_name%>
             <%= legislator.last_name%><br>
+            <h4>
+              <%= link_to "Search articles", legislator_path("#{legislator.first_name}" " " "#{legislator.last_name}")%><br>
+            </h4>
             <h6 class="card-subtitle">
               <%= legislator.state %>
               <%= legislator.party %><br>
@@ -20,7 +23,6 @@
             </h6>
         </h4>
         </div>
-        <%=image_tag(legislator.photo) %>
         <div class="card-block">
           <p class="card-text">
              <%= legislator.email %><br>
