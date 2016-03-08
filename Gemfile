@@ -34,6 +34,7 @@ gem 'excon'
 gem 'social-share-button'
 gem 'bootstrap-social-rails'
 gem "skylight"
+gem "rails_12factor"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
