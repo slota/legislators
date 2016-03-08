@@ -15,22 +15,3 @@
 //= require jquery_ujs
 //= require_tree .
 //= require social-share-button
-
-$(document).ready(function(){
-$('.background-banner').delay( 2000 ).fadeTo('slow', 0.0);
-$('.test').delay( 2000 ).fadeTo('slow', 0.0);
-
-  legislatorSearch();
-});
-
-// function legislatorSearch() {
-//   $('#search-submit').click(event, function() {
-//     var searchTerm = $('#legislator-search').val().toLowerCase();
-//     $.ajax({url: "legislators", type: "GET", data: {searchTerm},});
-//     $('#legislator-search').val("");
-//     // $('#legislator-show').append("<%= j render(partial: 'legislator') %>")
-//
-//     });
-
-
-};
