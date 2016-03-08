@@ -1,6 +1,6 @@
 <div class="card-legislator">
   <h2>News Articles for <%= @legislator %></h2>
-  <div class="row">
+  <div class="row buttons">
     <div class="button">
       <%= link_to "Positive News", legislator_path(@legislator, "positive") %>
     </div>
@@ -8,6 +8,7 @@
       <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
     </div>
   </div>
+  <% if @articles %>
   <table class="table">
     <thead>
       <tr>
@@ -16,7 +17,6 @@
       </tr>
     </thead>
     <tbody>
-      <% if @articles %>
       <br>
         Returned <%= @articles.count %> articles
         <% @articles.each do |article| %>
