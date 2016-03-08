@@ -1,6 +1,6 @@
 class LegislatorsController < ApplicationController
   def index
-    @legislators = Legislator.all(params["name"])
+    @legislators = Legislator.all(params)
   end
 
   def show

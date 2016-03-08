@@ -5,7 +5,11 @@ class SunlightFoundationService
     @connection = Faraday.new(url: "http://congress.api.sunlightfoundation.com/")
   end
 
-  def name_lookup(name)
-    JSON.parse(connection.get("legislators?query=#{name}&apikey=#{ENV["SUNLIGHT_API_KEY"]}").body)
+  def query(term)
+    JSON.parse(connection.get("legislators?query=#{term}&apikey=#{ENV["SUNLIGHT_API_KEY"]}").body)
+  end
+
+  def zip(zip)
+    JSON.parse(connection.get("legislators/locate?zip=#{zip}&apikey=#{ENV["SUNLIGHT_API_KEY"]}").body)
   end
 end
