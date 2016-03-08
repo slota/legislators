@@ -1,6 +1,6 @@
 <div class="card-legislator">
   <h2>News Articles for <%= @legislator %></h2>
-  <div class="row">
+  <div class="row buttons">
     <div class="button">
       <%= link_to "Positive News", legislator_path(@legislator, "positive") %>
     </div>
@@ -8,16 +8,28 @@
       <%= link_to "Negative News", legislator_path(@legislator, "negative") %>
     </div>
   </div>
-  <div class="row">
-    <% if @articles %>
-      Returned <%= @articles.count %> articles
-      <h3> <% @articles.each do |article| %></h3>
-      <%= link_to("#{article.title}", article.url) %>
-        <%= link_to "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{article.url}&redirect_uri=#{request.original_url}", class: "btnz share facebook" do %>
-          <i class="fa fa-facebook"></i> Share on Facebook!
+  <% if @articles %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Share</th>
+      </tr>
+    </thead>
+    <tbody>
+      <br>
+        Returned <%= @articles.count %> articles
+        <% @articles.each do |article| %>
+        <tr>
+          <td><%= link_to("#{article.title}", article.url, target:"_blank") %></td>
+          <td>
+            <%= link_to "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{article.url}&redirect_uri=#{request.original_url}", class: "btnz share facebook" do %>
+              <i class="fa fa-facebook"></i>
+            <% end %>
+          </td>
+        </tr>
         <% end %>
-        <br>
       <% end %>
-    <% end %>
-  </div>
+    </tbody>
+  </table>
 </div>
