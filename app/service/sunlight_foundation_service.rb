@@ -6,6 +6,6 @@ class SunlightFoundationService
   end
 
   def name_lookup(name)
-    JSON.parse(connection.get("legislators?first_name=#{name[0]}&last_name=#{name[1]}&apikey=#{ENV["SUNLIGHT_API_KEY"]}").body)
+    JSON.parse(connection.get("legislators?query=#{name}&apikey=#{ENV["SUNLIGHT_API_KEY"]}").body)
   end
 end
