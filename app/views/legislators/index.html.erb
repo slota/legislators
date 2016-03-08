@@ -1,7 +1,12 @@
 <%= form_tag :legislators, method: :get do |f| %>
-  <%= text_field_tag :name, nil, placeholder: "Search for Legislator by Name" %><br />
+  <%= text_field_tag :search_terms, nil, placeholder: "Search for Legislator by Name" %><br />
   <%= submit_tag "Search", class: "button-large" %>
 <% end %>
+<%= form_tag :legislators, method: :get do |f| %>
+  <%= text_field_tag :zip, nil, placeholder: "Search for Legislator by Zip" %><br />
+  <%= submit_tag "Search", class: "button-large" %>
+<% end %>
+<br>
 
 <br>
 <div class="row">

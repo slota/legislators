@@ -1,15 +1,30 @@
 class Legislator
   attr_reader :first_name, :last_name, :photo, :party, :email, :state, :chamber, :url, :phone, :twitter
 
-  def self.all(string_name)
-    if string_name
-      search_terms = string_name.split
-      response = search_terms.map do |term|
-        SunlightFoundationService.new.name_lookup(term)["results"]
-      end
-      response.uniq.flatten.map do |legislator|
-        Legislator.new(legislator)
-      end
+  def self.all(params)
+    if params[:search_terms]
+      find_by_name(params[:search_terms])
+    elsif params[:zip]
+      find_by_zip(params[:zip])
+    end
+  end
+
+  def self.find_by_name(search_terms)
+    search_terms = search_terms.split
+    response = search_terms.map do |term|
+      SunlightFoundationService.new.query(term)["results"]
+    end
+    create_legislators(response.uniq.flatten)
+  end
+
+  def self.find_by_zip(zip)
+    response = SunlightFoundationService.new.zip(zip)["results"]
+    create_legislators(response)
+  end
+
+  def self.create_legislators(legislators)
+    legislators.map do |legislator|
+      Legislator.new(legislator)
     end
   end
 
