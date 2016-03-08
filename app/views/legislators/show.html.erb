@@ -24,7 +24,7 @@
           <td><%= link_to("#{article.title}", article.url, target:"_blank") %></td>
           <td>
             <%= link_to "http://www.facebook.com/dialog/feed?app_id=#{ENV["FACEBOOK_KEY"]}&link=#{article.url}&redirect_uri=#{request.original_url}", class: "btnz share facebook" do %>
-              <i class="fa fa-facebook"></i>
+              <i class="fa fa-facebook" aria-label="Share with Facebook"></i>
             <% end %>
           </td>
         </tr>
