@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+  <% if session[:user_id] %>
+  <div class="container-fluid">
+    <ul class="navbar-header navbar-text">
+      <h4> Welcome <%= current_user.name%>, check your reps!</h4>
+    </ul>
+    <ul class="nav navbar-nav navbar-right navbar-text">
+      <h4> <%= link_to "Sign Out", logout_path%></h4>
+    </ul>
+    <%= render partial: "partials/info_buttons" %>
+  </div>
+  <% else %>
+  <div class="container-fluid">
+    <ul class="navbar-header navbar-text">
+      <h4> Log in with facebook to share your favorite articles!</h4>
+    </ul>
+    <%= link_to login_path, class: "nav navbar-nav navbar-right btn btn-block btn-social btn-facebook" do %>
+       <span class="fa fa-facebook"></span> Sign in with Facebook
+    <% end %>
+    <%= render partial: "partials/info_buttons" %>
+  </div>
+  <% end %>
+</nav>
