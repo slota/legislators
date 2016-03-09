@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-09T11:35:12-07:00">2016-03-09T11:35:12-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-09T13:44:57-07:00">2016-03-09T13:44:57-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.61%</span></span>
+    (<span class="covered_percent"><span class="green">98.73%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.88
+         2.08
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>45</b> files in total.
-    <b>288</b> relevant lines. 
-    <span class="green"><b>284</b> lines covered</span> and
+    <b>47</b> files in total.
+    <b>314</b> relevant lines. 
+    <span class="green"><b>310</b> lines covered</span> and
     <span class="red"><b>4</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -167,7 +167,7 @@
         <td>28</td>
         <td>28</td>
         <td>0</td>
-        <td>4.6</td>
+        <td>7.0</td>
       </tr>
       
       <tr>
@@ -217,7 +217,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -451,13 +451,33 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#0c9d9f353e55469beb06cb4e885eeedeeb2629ae" class="src_link" title="test/models/article_test.rb">test/models/article_test.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#30b029b829600c74f2db75601fb1bd5717910b99" class="src_link" title="test/models/legislator_test.rb">test/models/legislator_test.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>119</td>
+        <td>28</td>
+        <td>28</td>
+        <td>0</td>
+        <td>1.5</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#e297e1be0d1ad7b9acb9166e8350ecbb86780cc4" class="src_link" title="test/models/location_test.rb">test/models/location_test.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>7</td>
-        <td>2</td>
-        <td>2</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
       </tr>
       
       <tr>
@@ -1274,20 +1294,20 @@
           <code class="ruby">  def self.find_by_name(search_terms)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="13">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="13">
+          <span class="hits">5</span>
           
           <code class="ruby">    search_terms = search_terms.split</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="14">
+          <span class="hits">5</span>
           
           <code class="ruby">    response = search_terms.map do |term|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="15">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
           <code class="ruby">      SunlightFoundationService.new.query(term)[&quot;results&quot;]</code>
         </li>
@@ -1298,8 +1318,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="17">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="17">
+          <span class="hits">5</span>
           
           <code class="ruby">    create_legislators(response.uniq.flatten)</code>
         </li>
@@ -1322,14 +1342,14 @@
           <code class="ruby">  def self.find_by_zip(zip)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
           
           <code class="ruby">    response = SunlightFoundationService.new.zip(zip)[&quot;results&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="22">
+          <span class="hits">2</span>
           
           <code class="ruby">    create_legislators(response)</code>
         </li>
@@ -1352,14 +1372,14 @@
           <code class="ruby">  def self.create_legislators(legislators)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="26">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="26">
+          <span class="hits">8</span>
           
           <code class="ruby">    legislators.map do |legislator|</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="27">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="12" data-linenumber="27">
+          <span class="hits">12</span>
           
           <code class="ruby">      Legislator.new(legislator)</code>
         </li>
@@ -1388,56 +1408,56 @@
           <code class="ruby">  def initialize(legislator)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="32">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="32">
+          <span class="hits">13</span>
           
           <code class="ruby">    @first_name = legislator[&quot;first_name&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="33">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="33">
+          <span class="hits">13</span>
           
           <code class="ruby">    @last_name = legislator[&quot;last_name&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="34">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="34">
+          <span class="hits">13</span>
           
           <code class="ruby">    @party = legislator[&quot;party&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="35">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="35">
+          <span class="hits">13</span>
           
           <code class="ruby">    @email = legislator[&quot;oc_email&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="36">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="36">
+          <span class="hits">13</span>
           
           <code class="ruby">    @state = legislator[&quot;state_name&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="37">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="37">
+          <span class="hits">13</span>
           
           <code class="ruby">    @chamber = legislator[&quot;chamber&quot;].capitalize</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="38">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="38">
+          <span class="hits">13</span>
           
           <code class="ruby">    @url = legislator[&quot;website&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="39">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="39">
+          <span class="hits">13</span>
           
           <code class="ruby">    @phone = legislator[&quot;phone&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="40">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="40">
+          <span class="hits">13</span>
           
           <code class="ruby">    @twitter = legislator[&quot;twitter_id&quot;]</code>
         </li>
@@ -1766,8 +1786,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="5">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">    @connection = Faraday.new(url: &quot;http://congress.api.sunlightfoundation.com/&quot;)</code>
         </li>
@@ -1790,8 +1810,8 @@
           <code class="ruby">  def query(term)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="9">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="9">
+          <span class="hits">7</span>
           
           <code class="ruby">    JSON.parse(connection.get(&quot;legislators?query=#{term}&amp;apikey=#{ENV[&quot;SUNLIGHT_API_KEY&quot;]}&quot;).body)</code>
         </li>
@@ -1814,8 +1834,8 @@
           <code class="ruby">  def zip(zip)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="13">
+          <span class="hits">4</span>
           
           <code class="ruby">    JSON.parse(connection.get(&quot;legislators/locate?zip=#{zip}&amp;apikey=#{ENV[&quot;SUNLIGHT_API_KEY&quot;]}&quot;).body)</code>
         </li>
@@ -4362,13 +4382,31 @@
   </pre>
 </div>
       
-        <div class="source_table" id="e297e1be0d1ad7b9acb9166e8350ecbb86780cc4">
+        <div class="source_table" id="0c9d9f353e55469beb06cb4e885eeedeeb2629ae">
   <div class="header">
-    <h3>test/models/location_test.rb</h3>
+    <h3>test/models/article_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>0</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="30b029b829600c74f2db75601fb1bd5717910b99">
+  <div class="header">
+    <h3>test/models/legislator_test.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>28</b> relevant lines. 
+      <span class="green"><b>28</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4397,25 +4435,757 @@
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">  # test &quot;the truth&quot; do</code>
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;find by name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    legislator = Legislator.find_by_name(&quot;diana&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.first.first_name, &quot;Diana&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;find by zip&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    legislator = Legislator.find_by_zip(&quot;80211&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.first.first_name, &quot;Cory&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;create_legislator&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    legislator = Legislator.create_legislators(@legislators)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.first.first_name, &quot;Diana&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;new&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    legislator = Legislator.new(@legislator)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.chamber, &quot;Senate&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.email, &quot;Sen.Gardner@opencongress.org&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.first_name, &quot;Cory&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.last_name, &quot;Gardner&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.party, &quot;R&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.phone, &quot;202-224-5941&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.state, &quot;Colorado&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.twitter, &quot;SenCoryGardner&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal legislator.url, &quot;http://www.gardner.senate.gov&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def setup</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="35">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @params_zip = {&quot;utf8&quot;=&gt;&quot;✓&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">                    &quot;zip&quot;=&gt;&quot;80211&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">                    &quot;commit&quot;=&gt;&quot;Search&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">                    &quot;controller&quot;=&gt;&quot;legislators&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">                    &quot;action&quot;=&gt;&quot;index&quot;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="41">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @params_name = {&quot;utf8&quot;=&gt;&quot;✓&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">                    &quot;search_terms&quot;=&gt;&quot;diana&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">                    &quot;commit&quot;=&gt;&quot;Search&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">                    &quot;controller&quot;=&gt;&quot;legislators&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">                    &quot;action&quot;=&gt;&quot;index&quot;}</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="46">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @search_terms = &quot;diana&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="48">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @legislators = [{&quot;bioguide_id&quot;=&gt;&quot;D000197&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">                    &quot;birthday&quot;=&gt;&quot;1957-07-29&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">                    &quot;chamber&quot;=&gt;&quot;house&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">                    &quot;contact_form&quot;=&gt;&quot;https://degette.house.gov/contact/send-me-an-email/email-me&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">                    &quot;crp_id&quot;=&gt;&quot;N00006134&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">                    &quot;district&quot;=&gt;1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">                    &quot;facebook_id&quot;=&gt;&quot;110757973488&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">                    &quot;fax&quot;=&gt;&quot;202-225-5657&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">                    &quot;fec_ids&quot;=&gt;[&quot;H6CO01141&quot;],</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">                    &quot;first_name&quot;=&gt;&quot;Diana&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">                    &quot;gender&quot;=&gt;&quot;F&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">                    &quot;govtrack_id&quot;=&gt;&quot;400101&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">                    &quot;icpsr_id&quot;=&gt;29710,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">                    &quot;in_office&quot;=&gt;true,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">                    &quot;last_name&quot;=&gt;&quot;DeGette&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">                    &quot;middle_name&quot;=&gt;&quot;L.&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">                    &quot;name_suffix&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">                    &quot;nickname&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">                    &quot;oc_email&quot;=&gt;&quot;Rep.Degette@opencongress.org&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">                    &quot;ocd_id&quot;=&gt;&quot;ocd-division/country:us/state:co/cd:1&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">                    &quot;office&quot;=&gt;&quot;2368 Rayburn House Office Building&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">                    &quot;party&quot;=&gt;&quot;D&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">                    &quot;phone&quot;=&gt;&quot;202-225-4431&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">                    &quot;state&quot;=&gt;&quot;CO&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">                    &quot;state_name&quot;=&gt;&quot;Colorado&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">                    &quot;term_end&quot;=&gt;&quot;2017-01-03&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">                    &quot;term_start&quot;=&gt;&quot;2015-01-06&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">                    &quot;thomas_id&quot;=&gt;&quot;01479&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">                    &quot;title&quot;=&gt;&quot;Rep&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">                    &quot;twitter_id&quot;=&gt;&quot;RepDianaDeGette&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">                    &quot;votesmart_id&quot;=&gt;561,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">                    &quot;website&quot;=&gt;&quot;http://degette.house.gov&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">                    &quot;youtube_id&quot;=&gt;&quot;RepDianaDeGette&quot;}]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="82">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @legislator = {&quot;bioguide_id&quot;=&gt;&quot;G000562&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">                   &quot;birthday&quot;=&gt;&quot;1974-08-22&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">                   &quot;chamber&quot;=&gt;&quot;senate&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">                   &quot;contact_form&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">                   &quot;crp_id&quot;=&gt;&quot;N00030780&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">                   &quot;district&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">                   &quot;facebook_id&quot;=&gt;&quot;160924893954206&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">                   &quot;fax&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">                   &quot;fec_ids&quot;=&gt;[&quot;H0CO04122&quot;, &quot;S4CO00395&quot;],</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">                   &quot;first_name&quot;=&gt;&quot;Cory&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">                   &quot;gender&quot;=&gt;&quot;M&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">                   &quot;govtrack_id&quot;=&gt;&quot;412406&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">                   &quot;icpsr_id&quot;=&gt;21112,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">                   &quot;in_office&quot;=&gt;true,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">                   &quot;last_name&quot;=&gt;&quot;Gardner&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">                   &quot;lis_id&quot;=&gt;&quot;S377&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">                   &quot;middle_name&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">                   &quot;name_suffix&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">                   &quot;nickname&quot;=&gt;nil,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">                   &quot;oc_email&quot;=&gt;&quot;Sen.Gardner@opencongress.org&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">                   &quot;ocd_id&quot;=&gt;&quot;ocd-division/country:us/state:co&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby">                   &quot;office&quot;=&gt;&quot;354 Russell Senate Office Building&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">                   &quot;party&quot;=&gt;&quot;R&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby">                   &quot;phone&quot;=&gt;&quot;202-224-5941&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby">                   &quot;senate_class&quot;=&gt;2,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">                   &quot;state&quot;=&gt;&quot;CO&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">                   &quot;state_name&quot;=&gt;&quot;Colorado&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">                   &quot;state_rank&quot;=&gt;&quot;junior&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">                   &quot;term_end&quot;=&gt;&quot;2021-01-03&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby">                   &quot;term_start&quot;=&gt;&quot;2015-01-06&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">                   &quot;thomas_id&quot;=&gt;&quot;01998&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">                   &quot;title&quot;=&gt;&quot;Sen&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby">                   &quot;twitter_id&quot;=&gt;&quot;SenCoryGardner&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">                   &quot;votesmart_id&quot;=&gt;30004,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">                   &quot;website&quot;=&gt;&quot;http://www.gardner.senate.gov&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby">                   &quot;youtube_id&quot;=&gt;nil}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="e297e1be0d1ad7b9acb9166e8350ecbb86780cc4">
+  <div class="header">
+    <h3>test/models/location_test.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>0</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># require &#39;test_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"># class LocationTest &lt; ActiveSupport::TestCase</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">#   # test &quot;the truth&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">  #   assert true</code>
+          <code class="ruby">#   #   assert true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby">#   # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby"># end</code>
         </li>
       
     </ol>
