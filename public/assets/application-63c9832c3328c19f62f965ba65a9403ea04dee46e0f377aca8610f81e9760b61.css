@@ -10076,3 +10076,11 @@ table {
 .buttons {
   height: 40px;
 }
+
+/* line 171, /Users/johnslota/code/ruby_rails/1510/legislators/app/assets/stylesheets/custom.scss */
+.card-intro {
+  background-color: rgba(255, 255, 255, 0.66);
+  text-align: center;
+  border: 3px solid black;
+  margin-top: 100px;
+}
