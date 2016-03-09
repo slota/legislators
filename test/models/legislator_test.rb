@@ -10,6 +10,7 @@ class LocationTest < ActiveSupport::TestCase
   test "find by zip" do
     legislator = Legislator.find_by_zip("80211")
     assert_equal legislator.first.first_name, "Cory"
+    assert_equal legislator.count, 3
   end
 
   test "create_legislator" do

@@ -2,7 +2,7 @@ class Legislator
   attr_reader :first_name, :last_name, :photo, :party, :email, :state, :chamber, :url, :phone, :twitter
 
   def self.all(params)
-    if params[:search_terms]
+      if params[:search_terms]
       find_by_name(params[:search_terms])
     elsif params[:zip]
       find_by_zip(params[:zip])
