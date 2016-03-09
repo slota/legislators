@@ -8,9 +8,13 @@ class UserViewsNewsTest < ActionDispatch::IntegrationTest
 
   test 'user views legislator news' do
     visit '/'
+
     click_on("Sign in with Facebook")
-    fill_in("name", with: "diana")
-    click_on("Search")
+    
+    fill_in("search_terms", with: "diana")
+    within(".name-search") do
+      click_on("Search")
+    end
 
     assert current_path, legislators_path
     assert page.has_content? "Diana DeGette"

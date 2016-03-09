@@ -30,7 +30,7 @@ class ActionDispatch::IntegrationTest
         'image' => 'https://avatars2.githubusercontent.com/u/12905774?v=3&s=460'
       },
       })
-  end
+    end
 
   include Capybara::DSL
 
