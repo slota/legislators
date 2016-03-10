@@ -1,4 +1,4 @@
-# [Rep My new:](http://rep-my-news.herokuapp.com/)
+# [Rep My News:](http://rep-my-news.herokuapp.com/)
 [Hosted on Heroku](http://rep-my-news.herokuapp.com/)
 
 This project searchs for positive or negative news on any presidential candidate or legislator
@@ -11,4 +11,4 @@ This project searchs for positive or negative news on any presidential candidate
 
 ---
 ##### Created by John Slota
-##### [John Slota](https://github.com/slotaj) 
+##### [John Slota](https://github.com/slotaj)
