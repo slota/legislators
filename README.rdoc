@@ -1,28 +1,14 @@
-== README
+# [Rep My new:](http://rep-my-news.herokuapp.com/)
+[Hosted on Heroku](http://rep-my-news.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project searchs for positive or negative news on any presidential candidate or legislator
+---
+##### Features
 
-Things you may want to cover:
+  - Incorporates Facebook Oauth and share articles feature
+  - Pulls data for federal legislators with the Sunlight Foundation API
+  - Pulls data for news articles from the IBM Alchemy News API
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+---
+##### Created by John Slota
+##### [John Slota](https://github.com/slotaj) 
